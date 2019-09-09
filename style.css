@@ -1,0 +1,134 @@
+/* font-family: 'Open Sans', sans-serif;
+font-family: 'Raleway', sans-serif */
+ 
+
+h1,h2,h3,h4,h5,h5{
+    margin:0;
+}
+p{
+    /* margin:0 0 10px; */
+}
+body{
+    margin:0;
+    font-family:'Raleway','sans-serif';
+    font-size:14px; 
+    color:#6c7279;
+    background: #fff;
+}
+
+*,*:before,*:after{
+    box-sizing: border-box;
+}
+
+/* Container */
+.container{
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+/* HEADER */
+ .header{
+     width:100%;
+     position: absolute;
+     top:0;
+     left:0;
+     z-index:1000;
+    height: 100px;
+ }
+
+
+ .header_inner{
+     padding:35px 0;
+     display:flex;
+     align-items:center;
+     justify-content: space-between;
+     border-bottom: 1px solid #515369;
+ }
+
+ /* Nav */
+ 
+ .nav{
+    font-size : 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.nav_link{
+    padding-left:40px;
+    color:#fff;
+    text-decoration: none;
+    opacity: 0.75;
+    transition: opacity .15s linear;
+}
+.nav_link:first-child{
+    padding-left:0;
+
+}
+.nav_link:hover{
+    opacity:1; 
+    text-decoration: underline; 
+}
+
+/* INTRO  */
+.intro{
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    height: 750px;
+    padding-top:100px;
+    background: url("img/intro-bg.jpg") no-repeat center/cover;
+
+}
+
+.intro_title{
+    font-family:'Open Sans','sans-serif';
+    font-size:65px;
+    color:#fff;
+    font-weight: 700;
+    text-transform:uppercase;
+    margin-bottom:30px;
+}
+.intro_inner{
+    max-width: 970px;
+    width: 100%;
+    margin:0 auto;
+    line-height: 1.1;
+    text-align:center;
+
+}
+
+.intro_subtitle{
+    font-size:22px;
+    color:#fff;
+    line-height: 1.5;
+    font-weight: 400;
+    margin-bottom:60px;
+
+}
+
+/* Button */
+
+.btn{
+    display:inline-block;
+    vertical-align:top;
+    font-size:13px;
+    color:#fff;
+    font-weight:600;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding:14px 40px;
+    border-radius: 2px;
+    font-family:inherit;
+    border:0;
+    cursor:pointer;
+    transition: background-color 0.3s linear;
+}
+
+.btn--red{
+    background-color:#e84545;
+}
+
+.btn--red:hover{
+    background-color:#6c7279;
+}
