@@ -75,7 +75,7 @@ body{
     display:flex;
     flex-direction:column;
     justify-content: center;
-    height: 750px;
+    height: 100vh;
     padding-top:100px;
     background: url("img/intro-bg.jpg") no-repeat center/cover;
 
@@ -123,6 +123,7 @@ body{
     border:0;
     cursor:pointer;
     transition: background-color 0.3s linear;
+    text-align:center;
 }
 
 .btn--red{
@@ -218,4 +219,233 @@ body{
     font-size:14px;
     font-weight:700;
     color:#fff; 
+}
+
+/*TEAM */
+
+
+/* Team
+===================*/
+.team {
+    margin: 100px 0 70px;
+}
+
+.team__iner {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+
+.team__item {
+    width: 25%;
+    padding: 0 15px;
+    margin-bottom: 30px;
+}
+
+.team__photo {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.team__name {
+    margin-bottom: 8px;
+
+    font-size: 22px;
+    color: #2d3033;
+}
+
+.team__prof {
+    margin-bottom: 15px;
+
+    font-size: 13px;
+    color: #e84545;
+    text-transform: uppercase;
+}
+
+.team__text {
+    margin-bottom: 20px;
+    height:120px;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #6c7279;
+}
+
+
+.social {
+    display: flex;
+}
+.social--footer{
+    justify-content: center; 
+}
+.social__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    margin-right: 4px;
+
+    background-color: #fff;
+    border: 1px solid #e8ecee;
+
+    transition: background .1s linear;
+}
+
+.social__item:hover {
+    background-color: #e8ecee;
+}
+
+.social__item:hover .social__icon {
+    fill: #000;
+}
+.social--footer .social__item{
+    background: none; 
+    border-width: 2px;
+    border-color:#fff;
+    border-radius:2px;
+}
+.social--footer .social__item:hover{
+    background-color: #fff;
+}
+.social--footer .social__icon{
+    fill:#fff;
+}
+.social__icon {
+    display: block;
+    height: 18px;
+
+    fill: #c6cacc;
+
+    transition: fill .1s linear;
+}
+
+/* REWIEWS */
+
+.reviews {
+    overflow: hidden;
+    background-color: #53354a;
+}
+
+.reviews__item {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.reviews__photo {
+    width: 50%;
+    height: 500px;
+    position: relative;
+}
+
+.reviews__image {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    z-index: 1;
+
+    transform: translateY(-50%);
+}
+
+.reviews__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    padding-left: 80px;
+}
+
+.reviews__text {
+    margin-bottom: 25px;
+
+    font-family: 'Cardo', sans-serif;
+    font-style: italic;
+    font-size: 36px;
+    line-height: 1.2;
+    color: #fff;
+}
+
+.reviews__author {
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+/* Download */
+.download{
+    margin:90px 0;
+    text-align:center;
+}
+.download__title{
+    font-size:28px;
+    margin-bottom:12px;
+    color:#2d3033;
+
+}
+
+.download__text{
+    font-size:13px;
+    color:#2d3033;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom:30px;    
+}
+
+.btn--long{
+    min-width: 280px;
+    
+}
+
+.footer{
+    margin-top:90px;
+    background-color: #3a3e64;
+
+}
+
+.footer__iner{
+    padding:90px 0; 
+    display:flex;
+    flex-wrap:wrap;
+
+}
+.footer__block{
+    padding:0 15px;
+    text-align:center;
+    width: 33.333%;
+}
+
+.footer__title{
+    margin-bottom:10px;
+    font-size:14px;
+    color:#fff;
+    text-transform: uppercase;
+}
+.footer_address{
+    color:#fff;
+    opacity:0.5;
+    font-style:normal;
+    font-size:14px;
+    line-height: 1.5;
+}
+
+.footer__text{
+    color:#fff;
+    opacity:0.5;
+    font-style:normal;
+    font-size:14px;
+    line-height: 1.5;
+}
+.footer_copyright{
+    padding:20px 0;
+    background-color: #313454;
+}
+
+.copyright__text{
+    text-align:center;
+    font-size:14px;
+    color:#808080;
+    line-height: 1.5;
+    
 }
