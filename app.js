@@ -1,32 +1,70 @@
 $(function () {
-  // console.log("rabotaet");
-  let header = $("#header")
-  let intro = $("#intro")
+
+
+  /* Fixed Header */
+  let header = $("#header");
+  let intro = $("#intro");
   let introH = intro.innerHeight();
   let scrollPos = $(window).scrollTop();
-  // Out header(fixed (шапочка на фиксе))
-  header.addClass("fixed");
-  $(window).on("scroll load", function () {
+  let nav = $("#nav");
+  let navToggle = $("#navToggle");
+
+  checkScroll(scrollPos, introH);
+
+  $(window).on("scroll resize", function () {
+    introH = intro.innerHeight();
     scrollPos = $(this).scrollTop();
-    console.log(scrollPos)
+
+    checkScroll(scrollPos, introH);
+  });
+
+  function checkScroll(scrollPos, introH) {
     if (scrollPos > introH) {
       header.addClass("fixed");
     } else {
       header.removeClass("fixed");
     }
-  });
-  // Скролинг 
-  $("[data-scroll").on("click", function (event) {
+  }
+
+
+
+  /* Smooth scroll */
+  $("[data-scroll]").on("click", function (event) {
     event.preventDefault();
 
-    let elementID = $(this).data("scroll");
-    let elementoffset = $(elementID).offset().top;
+    let elementId = $(this).data('scroll');
+    let elementOffset = $(elementId).offset().top;
 
-    console.log(elementID);
+    nav.removeClass("show");
 
-    $("html,body").animate({
-      scrollTop: elementoffset - 70
-    }, 700)
-  })
+    $("html, body").animate({
+      scrollTop: elementOffset - 70
+    }, 700);
+  });
+
+
+
+  /* Nav Toggle */
+  navToggle.on("click", function (event) {
+    event.preventDefault();
+
+    nav.toggleClass("show");
+  });
+
+
+
+  /* Reviews: https://kenwheeler.github.io/slick/ */
+  let slider = $("#reviewsSlider");
+
+  slider.slick({
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    fade: true,
+    arrows: false,
+    dots: true
+  });
+
+
 
 });

@@ -70,6 +70,7 @@ body {
 /* Nav */
 
 .nav {
+    display: flex;
     font-size: 14px;
     font-weight: 700;
     text-transform: uppercase;
@@ -364,9 +365,19 @@ body {
     background-color: #53354a;
 }
 
+.reviews__slider {
+    height: 500px;
+    overflow: hidden;
+}
+
+.reviews__slider.slick-initialized {
+    height: auto;
+}
+
 .reviews__item {
     display: flex;
     flex-wrap: wrap;
+    overflow: hidden;
 }
 
 .reviews__photo {
@@ -375,7 +386,7 @@ body {
     position: relative;
 }
 
-.reviews__image {
+.reviews__img {
     position: absolute;
     top: 50%;
     right: 0;
@@ -407,6 +418,47 @@ body {
     font-weight: 700;
     text-transform: uppercase;
     color: #fff;
+}
+
+.slick-dots {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0 0 10px;
+    list-style: none;
+    width: 50%;
+
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+}
+
+.slick-dots li {
+    margin: 0 5px;
+}
+
+.slick-dots button {
+    width: 15px;
+    height: 15px;
+    padding: 0;
+
+    background: #fff;
+    border-radius: 50%;
+    border: 0;
+    opacity: .5;
+    cursor: pointer;
+
+    font-size: 0;
+    color: transparent;
+}
+
+.slick-dots button:focus {
+    outline: 0;
+}
+
+.slick-dots .slick-active button {
+    opacity: 1;
 }
 
 /* Download */
@@ -498,7 +550,7 @@ body {
     padding: 9px 2px;
 }
 
-.burger_item {
+.burger__item {
     display: block;
     width: 30px;
     height: 3px;
@@ -508,8 +560,8 @@ body {
     position: relative;
 }
 
-.burger_item:before,
-.burger_item:after {
+.burger__item:before,
+.burger__item:after {
     content: '';
     height: 100%;
     width: 100%;
@@ -519,13 +571,13 @@ body {
     z-index: 1;
 }
 
-.burger_item:before {
+.burger__item:before {
 
 
     top: -8px;
 }
 
-.burger_item:after {
+.burger__item:after {
 
     bottom: -8px;
 }
@@ -546,6 +598,26 @@ body {
 
     .nav {
         display: none;
+        position: absolute;
+        right: 0;
+        top: 100%;
+        flex-direction: column;
+        width: 100%;
+        text-align: right;
+        background-color: #31344e;
+
+    }
+
+    .nav.show {
+        display: flex;
+        background-color: #31344e;
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.4);
+        color: #fff;
+    }
+
+    .nav_link {
+        padding: 9px 15px;
     }
 
     .intro_title {
